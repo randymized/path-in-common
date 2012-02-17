@@ -2,27 +2,30 @@
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>file-common-dirs</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
-</tr>
-<tr>
-<td>Node Version</td>
-<td>>= 0.4</td>
+<td>Finds the path commmon to all given paths</td>
 </tr>
 </table>
 
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+inCommon = require('..')
+result= inCommon('/a/b/c/d','/a/b/c/e','/a/b/d/e','/a/b/f/e','/a/c/c/e')
+#(result equals '/a')
 ```
+Given any number of filesystem paths, this function determines which path is
+common to all.  It is assumed that all paths are fully-qualified and normalized.
 
-## Examples
-
-You can view further examples in the [example folder.](https://github.com/randymized/APPNAME/tree/master/examples)
+This function assumes POSIX paths.  If run on Windows, for example, a wrapper
+function would need to lowercase the paths to assure that the comparison is
+not case-sensitive, replace backslashes with forward slashes and replace
+drive letters with a name that starts with a leading slash.  It would then
+have to do a similar reverse conversion (or slice off the start of one of the
+original paths to arrive at a comparable result).
 
 ## LICENSE
 

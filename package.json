@@ -1,9 +1,9 @@
 {
-   "name":"APPNAME",
-   "description":"Nothing here yet",
+   "name":"path-in-common",
+   "description":"Finds the directory that common to all paths given",
    "version":"0.0.1",
-   "homepage":"http://github.com/randymized/APPNAME",
-   "repository":"git://github.com/randymized/APPNAME.git",
+   "homepage":"http://github.com/randymized/path-in-common",
+   "repository":"git://github.com/randymized/path-in-common.git",
    "author":"Randy McLaughlin <8b629a9884@snkmail.com>",
    "main":"./index.js",
    
@@ -11,15 +11,13 @@
       "coffee-script":"*"
    },
    "devDependencies":{
-      "node-log":"*"
-   },
-   "engines":{
-      "node":">= 0.4.0"
+       "mocha":"*",
+       "should":"*"
    },
    "licenses":[
       {
          "type":"MIT",
-         "url":"http://github.com/randymized/APPNAME/blob/master/LICENSE"
+         "url":"http://github.com/randymized/path-in-common/blob/master/LICENSE"
       }
    ]
 }
